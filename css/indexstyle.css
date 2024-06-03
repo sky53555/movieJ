@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "GmarketSansMedium";
+  font-weight: 300;
+  background-color: #333;
+  overflow-x: hidden;
+  display: flex;
+}
+
+/* #left */
+#left {
+  background: rgba(141, 138, 138);
+  width: 20%;
+  opacity: 1;
+  position: fixed;
+  height: 100vh;
+  z-index: 5;
+  transition: 1s;
+  left: 0;
+}
+#left.click {
+  left: -20%;
+}
+.arrow {
+  position: absolute;
+  right: -4.3rem;
+  top: 0;
+  font-size: 2rem;
+  color: #fff;
+  width: 70px;
+  height: 60px;
+  background: rgba(141, 138, 138);
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+#left h1 {
+  text-align: center;
+  margin: 3rem 0;
+}
+#left > ul {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 3;
+  font-size: 1.5rem;
+}
+.headfooter {
+  line-height: 2;
+  text-align: center;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* section */
+#right {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  margin-left: 20%;
+  transition: 1s;
+}
+#right.active {
+  margin-left: 0;
+  width: 100%;
+}
+#Container1 {
+  width: 100%;
+  height: 80vh;
+}
+
+/* bigimgbox */
+.bigImgBox {
+  padding-top: -3rem;
+}
+input {
+  color: white;
+}
+/* swiper */
+.swiper-container {
+  width: 80%;
+  height: 600px;
+  margin: 100px auto;
+  border-radius: 20px;
+  position: relative;
+}
+.swiper-container h2 {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  font-size: 3rem;
+}
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  display: flex;
+  transition: 0.3s all;
+  box-shadow: 0 0 20px #00000036;
+  border-radius: 10px;
+}
+.swiper-slide-active {
+  transition: 0.3s all;
+  opacity: 1;
+}
+
+/* container2 */
+#section1, #section2 {
+  width: 85%;
+  margin: 8rem auto;
+  position: relative;
+}
+section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+section h2 {
+  color: white;
+  font-size: 2.5rem;
+}
+.imgWrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.famous, .coming {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+.famous > li, .coming > li {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.famous > li:hover img, .coming > li:hover img {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.famous > li .textWrap, .coming > li .textWrap {
+  width: 100%;
+  position: absolute;
+  bottom: -6rem;
+  color: #fff;
+}
+
+.movieHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btns {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.btns i {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* searchResult 지향 검색 결과 및 수정 */
+#searchResult {
+  color: #fff;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rem;
+}
+#searchResult #result {
+  font-size: 3rem;
+}
+#searchResult .total_num {
+  text-align: right;
+  font-size: 2rem;
+  margin: 2rem 0 4rem;
+}
+.movies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.movies li {
+  margin-bottom: 10rem;
+  border-radius: 2rem;
+  width: 30%;
+  height: 45vh;
+  cursor: pointer;
+}
+.movies .imgWrap {
+  height: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.textWrap {
+  margin-top: 1.5rem;
+}
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textTop {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.textTop #movieCon {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.textTop h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.textTop .topIcon {
+  font-size: 2rem;
+  color: white;
+  justify-self: end;
+  cursor: pointer;
+}
+.textTop .textDown {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: left;
+}
+.textDown span {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.textDown p i {
+  color: rgb(237, 237, 155);
+}
+.more {
+  width: 10rem;
+  height: 4.5rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.more:hover {
+  background-color: #fff;
+  color: #000;
+}
+#section1 .swiper-container, #section2 .swiper-container {
+  width: 100%;
+}
+#section1 .swiper-wrapper, #section2 .swiper-wrapper {
+  justify-content: start;
+  gap: 3rem;
+}
+#section1 .swiper-wrapper li, #section2 .swiper-wrapper li {
+  width: calc(100% / 3);
+  flex-direction: column;
+  color: #fff;
+}
+#movieName {
+  font-size: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#container2 .textTop{
+  flex-wrap: nowrap;
+}

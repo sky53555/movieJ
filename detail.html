@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>divein_genrepage</title>
+    <link href="css/headerstyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/substyle.css" />
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="index.html">Dive in</a></h1>
+      <ul class="menu">
+        <li>
+          <span><i class="fa-solid fa-video"></i></span>
+          <a href="recent.html" id="recent">최신 영화</a>
+        </li>
+        <li>
+          <span><i class="fa-solid fa-folder-open"></i></span>
+          장르
+          <ul class="category">
+            <li><a href="sub.html?category=romance" id="romance">로맨스</a></li>
+            <li>
+              <a href="sub.html?category=thriller" id="thriller">공포·스릴러</a>
+            </li>
+            <li><a href="sub.html?category=fantasy" id="fantasy">판타지</a></li>
+            <li><a href="sub.html?category=drama" id="drama">드라마</a></li>
+          </ul>
+        </li>
+        <li id="wishlistToggle">
+          <span><i class="fa-solid fa-barcode"></i></span>
+          PICK ME
+        </li>
+        <!-- 인덱스랑 같게 함 -->
+
+        <!-- <li>
+          <span><i class="fa-solid fa-barcode"></i></span>
+          <a href="">PICK ME</a>
+        </li> -->
+      </ul>
+      <div class="headfooter">
+        <p>【Team Project】</p>
+        <ul>
+          <li>
+            <p>Lee Jihyang</p>
+            <p>Yun juyoung</p>
+            <p>Lee Hyunhwa</p>
+            <p>Oh Jeongyeon</p>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="subSection1">
+      <!--검색 창-->
+      <div class="right">
+        <form class="search" action="" method="get">
+          <input
+            class="searchTex"
+            type="text"
+            placeholder="영화를 입력하세요."
+          />
+          <button class="searchBtn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+      <!--검색 결과-->
+      <div id="searchResult"></div>
+
+      <!--디테일 결과-->
+      <section id="subDetail">
+        <ul class="detail">
+          <li>
+            <div class="conTop" id="poster"></div>
+            <div class="conBot">
+              <h2 id="movieName" class="sub"></h2>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-star"></i>
+                  <span id="rating"></span>
+                </li>
+                <li>
+                  <span id="release"></span>
+                </li>
+                <li><span id="duration"></span> 분</li>
+              </ul>
+              <p class="sub">감독 <span id="director"></span></p>
+              <p class="sub">출연</p>
+              <div id="castWrap"></div>
+              <p class="sub">소개</p>
+              <p id="introduction"></p>
+              <div class="trailerWrap">
+                <p class="sub">Trailer</p>
+                <div class="flexWrap" id="trailers"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <script src="js/genre.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/detail.js"></script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+/* ----------sub---------- */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: linear-gradient(to right, black, rgb(93, 88, 88));
+  font-family: "GmarketSansMedium";
+  font-weight: 300;
+  overflow-x: hidden;
+}
+#wishlistToggle {
+  cursor: pointer;
+}
+
+.headfooter {
+  line-height: 2;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-left: 1.8rem;
+}
+/* subSection1 */
+section img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+#subSection1 {
+  padding-left: 212px;
+  position: relative;
+  width: 100%;
+  padding-top: 8rem;
+}
+
+#genre {
+  text-align: center;
+  padding: 3rem 0;
+  color: #fff;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+/* main */
+.main {
+  width: 90%;
+  height: 300px;
+  margin: 15px auto;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main h3 {
+  font-size: 3rem;
+  position: absolute;
+  bottom: 3rem;
+  right: 4rem;
+  color: #fff;
+}
+
+/* content */
+.movies {
+  width: 90%;
+  margin: 3rem auto 0;
+}
+.moviesWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.movies li {
+  margin-bottom: 10rem;
+  border-radius: 2rem;
+  width: 30%;
+  height: 45vh;
+  cursor: pointer;
+}
+.movies .imgWrap {
+  height: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.textWrap {
+  margin-top: 1.5rem;
+}
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textTop {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.textTop #movieCon {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.textTop h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+.textTop .topIcon {
+  font-size: 2rem;
+  color: white;
+  justify-self: end;
+  cursor: pointer;
+}
+.textTop .textDown {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: left;
+  color: #fff;
+}
+.textDown span {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.textDown p i {
+  color: rgb(237, 237, 155);
+}
+.more {
+  width: 10rem;
+  height: 4.5rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.more:hover {
+  background-color: #fff;
+  color: #000;
+}
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+/* 디테일 */
+
+#subDetail {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-top: 5rem;
+}
+
+#poster {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+}
+#poster iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#castWrap {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  text-align: center;
+  margin: 4rem 0;
+}
+#castWrap img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.flexWrap {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+  justify-content: space-evenly;
+}
+.conBot {
+  width: 80%;
+  margin: 4rem auto;
+}
+.conBot ul {
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+  align-items: center;
+  padding: 0;
+  font-size: 1.2rem;
+}
+.conBot ul li {
+  list-style: none;
+  padding-right: 30px;
+  display: inline-block;
+  border-right: 1px solid #ffffff;
+  height: 20px; /* 보더의 높이 설정 */
+  line-height: 20px; /* 텍스트의 높이 설정 */
+  margin: 20px 0;
+}
+.conBot ul li:last-child {
+  border: none;
+}
+.conBot h2 {
+  font-size: 3rem;
+}
+.conBot p {
+  margin-top: 3rem;
+}
+#castWrap + p {
+  font-size: 1.8rem;
+}
+#director {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+}
+.trailerWrap p {
+  font-size: 1.8rem;
+}
+
+.sub {
+  font-size: 1.6rem;
+}

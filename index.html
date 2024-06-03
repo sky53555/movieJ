@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dive in main</title>
+    <link rel="stylesheet" href="css/headerstyle.css" />
+    <link rel="stylesheet" href="css/indexstyle.css" />
+    <link href="css/pick me.css" rel="stylesheet" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/opening.js"></script>
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7.0.6/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <section id="left">
+      <h1><a href="index.html">Dive in</a></h1>
+      <div class="arrow"><i class="fa-solid fa-arrow-left-long"></i></div>
+      <ul class="menu">
+        <li>
+          <span><i class="fa-solid fa-video"></i></span>
+          <a href="recent.html" id="recent">최신 영화</a>
+        </li>
+        <li>
+          <span><i class="fa-solid fa-folder-open"></i></span>
+          장르
+          <ul class="category">
+            <li><a href="#" data-category="romance" id="romance">로맨스</a></li>
+            <li>
+              <a href="#" data-category="thriller" id="thriller">공포·스릴러</a>
+            </li>
+            <li><a href="#" data-category="fantasy" id="fantasy">판타지</a></li>
+            <li><a href="#" data-category="drama" id="drama">드라마</a></li>
+          </ul>
+        </li>
+        <li id="wishlistToggle">
+          <span><i class="fa-solid fa-barcode"></i></span>
+          PICK ME
+        </li>
+      </ul>
+      <div class="headfooter">
+        <p>【Team Project】</p>
+        <ul>
+          <li>
+            <p>Lee Jihyang</p>
+            <p>Yun juyoung</p>
+            <p>Lee Hyunhwa</p>
+            <p>Oh Jeongyeon</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="right">
+      <div id="Container1">
+        <div class="con1">
+          <div class="right">
+            <form class="search" action="" method="get">
+              <input
+                class="searchTex"
+                type="text"
+                placeholder="영화를 입력하세요."
+              />
+              <button class="searchBtn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!--검색 결과-->
+        <div id="searchResult"></div>
+        <!--슬라이더-->
+        <div class="bigImgBox">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h2></h2>
+              </div>
+              <div class="swiper-slide">
+                <h2></h2>
+              </div>
+              <div class="swiper-slide">
+                <h2></h2>
+              </div>
+              <div class="swiper-slide">
+                <h2></h2>
+              </div>
+              <div class="swiper-slide">
+                <h2></h2>
+              </div>
+              <div class="swiper-slide">
+                <h2></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="container2">
+        <section id="section1">
+          <div class="movieHead">
+            <h2>인기 영화</h2>
+            <div class="btns">
+              <button class="prev-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="next-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="swiper-container famous-movies">
+            <div class="swiper-wrapper" id="famousMovies">
+              <!-- 인기 영화 슬라이드 -->
+            </div>
+          </div>
+        </section>
+        <section id="section2">
+          <div class="movieHead">
+            <h2>개봉 예정 영화</h2>
+            <div class="btns">
+              <button class="prev-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="next-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="swiper-container coming-movies">
+            <div class="swiper-wrapper" id="comingMovies">
+              <!-- 개봉 예정 영화 슬라이드 -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- 찜 -->
+    <div id="wishlist">
+      <h2>찜 목록</h2>
+      <ul id="wishlistItems"></ul>
+    </div>
+    <i class="fa-solid fa-arrow-left-long"></i>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let left = document.querySelector("#left");
+      let right = document.querySelector("#right");
+      let arrow = document.querySelector(".arrow");
+      let icon = document.querySelector(".arrow i");
+      arrow.addEventListener("click", function () {
+        left.classList.toggle("click");
+        if (left.classList == "click") {
+          icon.classList.remove("fa-arrow-left-long");
+          icon.classList.add("fa-arrow-right-long");
+          right.classList.add("active");
+        } else {
+          icon.classList.add("fa-arrow-left-long");
+          icon.classList.remove("fa-arrow-right-long");
+          right.classList.remove("active");
+        }
+      });
+      // const swiper = new Swiper(".swiper-container", {
+      //   loop: true,
+      //   autoplay: {
+      //     delay: 3000,
+      //     disableOnInteraction: false,
+      //   },
+      //   effect: "coverflow",
+      //   coverflowEffect: {
+      //     rotate: 0,
+      //     stretch: 0,
+      //     depth: 450,
+      //     modifier: 1,
+      //   },
+
+      // });
+
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        spaceBetween: -100,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 800,
+          modifier: 1,
+          slideShadows: false,
+        },
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var categoryLinks = document.querySelectorAll(".category a");
+
+        categoryLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // 링크의 기본 동작을 막습니다.
+            var category = this.getAttribute("data-category"); // data-category 속성 값을 가져옵니다.
+            if (category) {
+              var url = "sub.html?category=" + category; // 새로운 URL을 만듭니다.
+              window.location.href = url; // 해당 URL로 이동합니다.
+            } else {
+              console.error("Category is null");
+            }
+          });
+        });
+      });
+    </script>
+    <script src="js/search.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/pick me.js"></script>
+  </body>
+</html>

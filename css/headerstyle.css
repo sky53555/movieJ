@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  display: flex;
+}
+
+/* header */
+header {
+  width: 202px;
+  height: 100vh;
+  color: #fff;
+  background: rgba(141, 138, 138, 0.3);
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 98;
+}
+
+header h1 {
+  font-size: 35px;
+  font-family: "Libre Barcode 39 Extended Text", system-ui;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+header .menu {
+  margin: 50px 10px;
+  font-size: 20px;
+}
+
+header span i {
+  width: 30px;
+}
+
+header .menu>li {
+  padding: 20px;
+}
+
+header .menu>li:hover {
+  border-radius: 15px;
+  background: #fff;
+  color: #222;
+  padding: 20px;
+  font-weight: bold;
+}
+
+header .menu li:hover a {
+  color: #222;
+}
+
+header .menu li:hover i {
+  color: #222;
+}
+
+header .category {
+  padding-top: 15px;
+}
+
+header .category li {
+  padding: 15px;
+  font-size: 16px !important;
+}
+
+header div {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  font-size: 12px;
+  text-align: center;
+  font-family: none;
+}
+
+header div ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 검색 */
+.right {
+  display: flex;
+  justify-content: right;
+  padding: 15px;
+  position: relative;
+}
+
+/* right */
+.right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.search {
+  width: 300px;
+  height: 30px;
+  background: none;
+  padding: 10px;
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+  border-bottom: 1px solid #fff;
+}
+
+.searchTex {
+  width: 200px;
+  line-height: 30px;
+  padding: 0px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  font-size: 16px;
+}
+
+.searchBtn {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  float: right;
+  background: none;
+  border: none;
+  font-size: 16px;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*
+추가
+
+*/
+
+input {
+  caret-color: #fff;
+  color: #fff;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* open */
+.open {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  position: absolute;
+  z-index: 99;
+  overflow-y: hidden;
+}
+
+.open div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.open div img {
+  filter: invert(100%);
+  position: relative;
+  top: 250px;
+}
